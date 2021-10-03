@@ -4,4 +4,5 @@ export interface ArticuloItem{
     descuento?: boolean,
     img: boolean,
     imgurl?: string
+    descripcion: string;
 }

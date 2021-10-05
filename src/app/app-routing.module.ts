@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './pages/inicio/inicio.component';
-import { NoticiasComponent } from './pages/noticias/noticias.component';
-import { SugerenciasComponent } from './pages/sugerencias/sugerencias.component';
-import { ArticulosComponent } from './pages/articulos/articulos.component';
 
 
 const rutas:Routes = [
@@ -14,15 +11,15 @@ const rutas:Routes = [
   },
   {
     path: 'noticias',
-    component:NoticiasComponent
+    loadChildren: () => import('./pages/noticias/noticias.module').then(m=>m.NoticiasModule)
   },
   {
     path: 'sugerencias',
-    component:SugerenciasComponent
+    loadChildren: () => import('./pages/sugerencias/sugerencias.module').then(m => m.SugerenciasModule)
   },
   {
     path: 'articulos',
-    component:ArticulosComponent
+    loadChildren: () => import('./pages/articulos/articulos.module').then(m => m.ArticulosModule)
   },
   {
     path:'**',

@@ -1,10 +1,6 @@
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-
 <div class="container">
-    <div class="card-columns">
-        <div *ngFor="let item of items" class="card" style="width: 20rem;">
+    <div class="row">
+        <div *ngFor="let item of items" class="card" style="width: 25rem;">
             <img class="card-img-top" *ngIf="item.img" src="{{item.imgurl}}" alt="Card image cap">
             <img class="card-img-top" *ngIf="!item.img" src="../../assets/notavailable.jpg" alt="Card image cap">
             <div class="card-body">

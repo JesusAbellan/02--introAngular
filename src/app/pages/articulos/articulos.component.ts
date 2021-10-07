@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticuloItem } from 'src/app/interfaces/articuloitem.interface';
 
+
 @Component({
   selector: 'app-articulos',
   templateUrl: './articulos.component.html',

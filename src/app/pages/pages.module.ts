@@ -4,6 +4,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { SugerenciasComponent } from './sugerencias/sugerencias.component';
 import { ArticulosComponent } from './articulos/articulos.component';
+import { ComponentesModule } from '../components/componentes.module';
 
 
 
@@ -15,7 +16,8 @@ import { ArticulosComponent } from './articulos/articulos.component';
     ArticulosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentesModule
   ],
   exports: [
     InicioComponent,

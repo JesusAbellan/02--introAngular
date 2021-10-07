@@ -1,0 +1,15 @@
+<div style="width: 15rem;">
+    <img class="card-img-top" *ngIf="item.img" src="{{item.imgurl}}" alt="Card image cap">
+    <img class="card-img-top" *ngIf="!item.img" src="../../assets/notavailable.jpg" alt="Card image cap">
+    <div class="card-body">
+        <h2 class="card-title">{{item.nombre}}</h2>
+        <p class="card-text">{{item.descripcion}}</p>
+        <p class="card-text">{{item.precio}}</p>
+        <p *ngIf="item.descuento">Descuento: {{(item.precio * 0.8) | number:"1.2-2"}}€</p>
+        <p *ngIf="!item.descuento">--</p>
+        <div *ngIf="!item.descuento"><button class="btn btn-primary" (click)="descuento(item)">Aplicar
+                Descuento</button></div>
+        <div *ngIf="item.descuento"><button class="btn btn-danger" (click)="descuento(item)">Quitar
+                Descuento</button></div>
+    </div>
+</div>

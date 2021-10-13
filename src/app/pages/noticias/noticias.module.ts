@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { NoticiasRoutingModule } from './noticias-routing.module';
 import { NoticiasComponent } from './noticias.component';
+import { ComponentesModule } from '../../components/componentes.module';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { NoticiasComponent } from './noticias.component';
   ],
   imports: [
     CommonModule,
-    NoticiasRoutingModule
+    NoticiasRoutingModule,
+    ComponentesModule
   ]
 })
 export class NoticiasModule { }

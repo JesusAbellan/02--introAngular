@@ -1,0 +1,13 @@
+<div class="card text-center">
+    <img *ngIf="!noticia.urlToImage" class="card-img-top" src="../../../assets/notavailable.jpg" alt="Card image cap">
+    <img *ngIf="noticia.urlToImage" class="card-img-top altura" src="{{noticia.urlToImage}}" alt="Card image cap">
+    <div class ="card-body">
+        <h4 class ="card-title" [ngStyle]="{'cursor':'pointer'}" (click)="abreEnlace(noticia.url)"><strong>{{noticia.title}}</strong></h4>
+        <p class="card-text">{{noticia.description}}</p>
+        <p class="card-text">{{noticia.content}}</p>
+        <div class="card-footer">
+            <p class="card-text" *ngIf="noticia.author">{{noticia.author}}</p>
+            <p class="card-text">{{noticia.publishedAt}}</p>
+        </div>
+    </div>
+</div>

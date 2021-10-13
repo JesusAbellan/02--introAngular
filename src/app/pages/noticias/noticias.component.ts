@@ -9,11 +9,14 @@ import { Noticias } from '../../interfaces/respuesta';
 })
 export class NoticiasComponent implements OnInit {
 
-  constructor(private noticiasService:NoticiasService) { }
-  public noticias:Noticias[];
+  constructor(private _noticiasService: NoticiasService) { }
+  public noticias: Noticias[] = [];
 
   async ngOnInit() {
-    this.noticias = (await this.noticiasService.getNoticias()).articles;
+    try {
+      this.noticias = (await this._noticiasService.getNoticias()).articles;
+    } catch (error) {
+      console.log("Error recibiendo los datos de la promesa");
+    }
   }
-
 }

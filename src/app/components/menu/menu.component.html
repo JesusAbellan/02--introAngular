@@ -11,8 +11,8 @@
         <a class="navbar-brand" href="#">02 - Intro Angular</a>
       </div>
       <div>
-        <ul class="nav navbar-nav" *ngFor="let item of items">
-          <li><a routerLink="/{{item.ruta}}">{{item.texto}}</a></li>
+        <ul class="nav navbar-nav" *ngFor="let item of items; let i = index">
+          <li><a routerLink="/{{item.ruta}}">{{getTexto(i)}}</a></li>
         </ul>
       </div>
     </div>

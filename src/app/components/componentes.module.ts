@@ -4,6 +4,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { ArticuloComponent } from './articulo/articulo.component';
 import { NoticiaComponent } from './noticia/noticia.component';
+import { PipesModule } from '../pipes/pipes.module';
 
 
 
@@ -15,7 +16,8 @@ import { NoticiaComponent } from './noticia/noticia.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    PipesModule
   ],
   exports: [
     ArticuloComponent,

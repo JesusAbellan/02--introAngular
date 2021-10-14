@@ -7,9 +7,8 @@
         <p class="card-text">{{item.precio}}</p>
         <p *ngIf="item.descuento">Descuento: {{(item.precio * 0.8) | number:"1.2-2"}}€</p>
         <p *ngIf="!item.descuento">--</p>
-        <div *ngIf="!item.descuento"><button class="btn btn-primary" (click)="descuento(item)">Aplicar
-                Descuento</button></div>
-        <div *ngIf="item.descuento"><button class="btn btn-danger" (click)="descuento(item)">Quitar
-                Descuento</button></div>
+        <div *ngIf="!item.descuento"><button class="btn btn-primary" (click)="descuento(item)">Aplicar Descuento</button></div>
+        <div *ngIf="item.descuento"><button class="btn btn-danger" (click)="descuento(item)">Quitar Descuento</button></div>
+        <div><button class="btn btn-warning" (click)="comprar()">Comprar</button></div>
     </div>
 </div>

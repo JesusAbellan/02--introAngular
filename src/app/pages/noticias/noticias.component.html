@@ -1,7 +1,15 @@
 <div class ="container">
+    <div *ngIf="autoresFavoritos.length > 0" class="row">
+        <div class="col">Autores Favoritos:</div>
+        <div *ngFor="let a of autoresFavoritos" class= "col col-12">
+            {{a}}
+        </div>
+    </div>
+    <br>
     <div class="row">
+        <br>
         <div *ngFor="let n of noticias" class= "col col-lg-4 col-sm-6 col-xs-12">
-            <app-noticia [noticia]="n"></app-noticia>
+            <app-noticia [noticia]="n" (emiteGuardaAutor)="guardaAutorEnFavoritos($event)"></app-noticia>
         </div>
     </div>
 </div>

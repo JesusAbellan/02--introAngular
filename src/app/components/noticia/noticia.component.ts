@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Noticias } from 'src/app/interfaces/respuesta';
 
 @Component({
@@ -9,12 +9,17 @@ import { Noticias } from 'src/app/interfaces/respuesta';
 export class NoticiaComponent implements OnInit {
 
   @Input()noticia: Noticias;
+  @Output()emiteGuardaAutor:EventEmitter<string> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
   }
   abreEnlace(url:string){
     window.open(url,'_blank');
+  }
+
+  guardaAutor(autor:string){
+    this.emiteGuardaAutor.emit(autor);
   }
 
 }

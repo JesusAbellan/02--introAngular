@@ -11,7 +11,7 @@ export class NoticiasService {
   constructor(private _http:HttpClient) { }
   getNoticias(){
     return new Promise<Respuesta>((resolve,reject) =>{
-    const url = 'https://newsapi.org/v2/everything?q=andalucismo&from=2021-09-13&sortBy=publishedAt&apiKey=9c2d935a907d43c3b0838014c114e6db';
+    const url = 'https://newsapi.org/v2/everything?q=andalucia&from=2021-10-05&sortBy=publishedAt&apiKey=6cb729d487bf4924841d3c33f4f4d71c';
     this._http.get<Respuesta>(url).subscribe(resp => {
       
       if(resp.status=='ok'){

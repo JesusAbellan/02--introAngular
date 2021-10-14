@@ -7,7 +7,8 @@
         <p class="card-text">{{noticia.content}}</p>
         <div class="card-footer">
             <p class="card-text" *ngIf="noticia.author">{{noticia.author}}</p>
-            <p class="card-text">{{noticia.publishedAt}}</p>
+            <div *ngIf="noticia.author" (click)="guardaAutor(noticia.author)" class="btn btn-success">Guardar Autor</div>
+            <p class="card-text">{{noticia.publishedAt | miFecha:true}}</p>
         </div>
     </div>
 </div>
